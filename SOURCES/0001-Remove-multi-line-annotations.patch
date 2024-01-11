@@ -1,0 +1,379 @@
+diff -up guava-31.0.1/android/guava/src/com/google/common/collect/CompactHashMap.java.multiline guava-31.0.1/android/guava/src/com/google/common/collect/CompactHashMap.java
+--- guava-31.0.1/android/guava/src/com/google/common/collect/CompactHashMap.java.multiline	2021-10-13 20:45:58.443768858 -0600
++++ guava-31.0.1/android/guava/src/com/google/common/collect/CompactHashMap.java	2021-10-13 20:45:58.827772298 -0600
+@@ -113,8 +113,6 @@ class CompactHashMap<K extends Object, V
+    * Maximum allowed false positive probability of detecting a hash flooding attack given random
+    * input.
+    */
+-  (
+-      )
+   static final double HASH_FLOODING_FPP = 0.001;
+ 
+   /**
+diff -up guava-31.0.1/android/guava/src/com/google/common/collect/CompactHashSet.java.multiline guava-31.0.1/android/guava/src/com/google/common/collect/CompactHashSet.java
+--- guava-31.0.1/android/guava/src/com/google/common/collect/CompactHashSet.java.multiline	2021-10-13 20:45:58.413768589 -0600
++++ guava-31.0.1/android/guava/src/com/google/common/collect/CompactHashSet.java	2021-10-13 20:45:58.827772298 -0600
+@@ -127,8 +127,6 @@ class CompactHashSet<E extends Object> e
+    * Maximum allowed false positive probability of detecting a hash flooding attack given random
+    * input.
+    */
+-  (
+-      )
+   static final double HASH_FLOODING_FPP = 0.001;
+ 
+   /**
+diff -up guava-31.0.1/android/guava/src/com/google/common/graph/Traverser.java.multiline guava-31.0.1/android/guava/src/com/google/common/graph/Traverser.java
+--- guava-31.0.1/android/guava/src/com/google/common/graph/Traverser.java.multiline	2021-10-13 20:45:58.364768150 -0600
++++ guava-31.0.1/android/guava/src/com/google/common/graph/Traverser.java	2021-10-13 20:45:58.827772298 -0600
+@@ -61,9 +61,6 @@ import javax.annotation.CheckForNull;
+  * @since 23.1
+  */
+ 
+-(
+-    "Call forGraph or forTree, passing a lambda or a Graph with the desired edges (built with"
+-        + " GraphBuilder)")
+ @ElementTypesAreNonnullByDefault
+ public abstract class Traverser<N> {
+   private final SuccessorsFunction<N> successorFunction;
+diff -up guava-31.0.1/android/guava/src/com/google/common/primitives/Doubles.java.multiline guava-31.0.1/android/guava/src/com/google/common/primitives/Doubles.java
+--- guava-31.0.1/android/guava/src/com/google/common/primitives/Doubles.java.multiline	2021-10-13 20:45:58.372768222 -0600
++++ guava-31.0.1/android/guava/src/com/google/common/primitives/Doubles.java	2021-10-13 20:45:58.827772298 -0600
+@@ -209,8 +209,6 @@ public final class Doubles extends Doubl
+    *     the array
+    * @throws IllegalArgumentException if {@code array} is empty
+    */
+-  (
+-      "Available in GWT! Annotation is to avoid conflict with GWT specialization of base class.")
+   public static double min(double... array) {
+     checkArgument(array.length > 0);
+     double min = array[0];
+@@ -229,8 +227,6 @@ public final class Doubles extends Doubl
+    *     in the array
+    * @throws IllegalArgumentException if {@code array} is empty
+    */
+-  (
+-      "Available in GWT! Annotation is to avoid conflict with GWT specialization of base class.")
+   public static double max(double... array) {
+     checkArgument(array.length > 0);
+     double max = array[0];
+diff -up guava-31.0.1/android/guava/src/com/google/common/primitives/Floats.java.multiline guava-31.0.1/android/guava/src/com/google/common/primitives/Floats.java
+--- guava-31.0.1/android/guava/src/com/google/common/primitives/Floats.java.multiline	2021-10-13 20:45:58.370768204 -0600
++++ guava-31.0.1/android/guava/src/com/google/common/primitives/Floats.java	2021-10-13 20:45:58.828772307 -0600
+@@ -206,8 +206,6 @@ public final class Floats extends Floats
+    *     the array
+    * @throws IllegalArgumentException if {@code array} is empty
+    */
+-  (
+-      "Available in GWT! Annotation is to avoid conflict with GWT specialization of base class.")
+   public static float min(float... array) {
+     checkArgument(array.length > 0);
+     float min = array[0];
+@@ -226,8 +224,6 @@ public final class Floats extends Floats
+    *     in the array
+    * @throws IllegalArgumentException if {@code array} is empty
+    */
+-  (
+-      "Available in GWT! Annotation is to avoid conflict with GWT specialization of base class.")
+   public static float max(float... array) {
+     checkArgument(array.length > 0);
+     float max = array[0];
+diff -up guava-31.0.1/android/guava/src/com/google/common/primitives/Ints.java.multiline guava-31.0.1/android/guava/src/com/google/common/primitives/Ints.java
+--- guava-31.0.1/android/guava/src/com/google/common/primitives/Ints.java.multiline	2021-10-13 20:45:58.369768195 -0600
++++ guava-31.0.1/android/guava/src/com/google/common/primitives/Ints.java	2021-10-13 20:45:58.828772307 -0600
+@@ -220,8 +220,6 @@ public final class Ints extends IntsMeth
+    *     the array
+    * @throws IllegalArgumentException if {@code array} is empty
+    */
+-  (
+-      "Available in GWT! Annotation is to avoid conflict with GWT specialization of base class.")
+   public static int min(int... array) {
+     checkArgument(array.length > 0);
+     int min = array[0];
+@@ -241,8 +239,6 @@ public final class Ints extends IntsMeth
+    *     in the array
+    * @throws IllegalArgumentException if {@code array} is empty
+    */
+-  (
+-      "Available in GWT! Annotation is to avoid conflict with GWT specialization of base class.")
+   public static int max(int... array) {
+     checkArgument(array.length > 0);
+     int max = array[0];
+diff -up guava-31.0.1/android/guava/src/com/google/common/primitives/Shorts.java.multiline guava-31.0.1/android/guava/src/com/google/common/primitives/Shorts.java
+--- guava-31.0.1/android/guava/src/com/google/common/primitives/Shorts.java.multiline	2021-10-13 20:45:58.367768177 -0600
++++ guava-31.0.1/android/guava/src/com/google/common/primitives/Shorts.java	2021-10-13 20:45:58.828772307 -0600
+@@ -219,8 +219,6 @@ public final class Shorts extends Shorts
+    *     the array
+    * @throws IllegalArgumentException if {@code array} is empty
+    */
+-  (
+-      "Available in GWT! Annotation is to avoid conflict with GWT specialization of base class.")
+   public static short min(short... array) {
+     checkArgument(array.length > 0);
+     short min = array[0];
+@@ -240,8 +238,6 @@ public final class Shorts extends Shorts
+    *     in the array
+    * @throws IllegalArgumentException if {@code array} is empty
+    */
+-  (
+-      "Available in GWT! Annotation is to avoid conflict with GWT specialization of base class.")
+   public static short max(short... array) {
+     checkArgument(array.length > 0);
+     short max = array[0];
+diff -up guava-31.0.1/android/guava/src/com/google/common/util/concurrent/ClosingFuture.java.multiline guava-31.0.1/android/guava/src/com/google/common/util/concurrent/ClosingFuture.java
+--- guava-31.0.1/android/guava/src/com/google/common/util/concurrent/ClosingFuture.java.multiline	2021-10-13 20:45:58.353768052 -0600
++++ guava-31.0.1/android/guava/src/com/google/common/util/concurrent/ClosingFuture.java	2021-10-13 20:45:58.828772307 -0600
+@@ -1227,9 +1227,6 @@ public final class ClosingFuture<V exten
+    *           .closing(executor);
+    * }</pre>
+    */
+-  // TODO(cpovirk): Use simple name instead of fully qualified after we stop building with JDK 8.
+-  @com.google.errorprone.annotations.DoNotMock(
+-      "Use ClosingFuture.whenAllSucceed() or .whenAllComplete() instead.")
+   public static class Combiner {
+ 
+     private final CloseableList closeables = new CloseableList();
+diff -up guava-31.0.1/android/guava/src/com/google/common/util/concurrent/ListeningExecutorService.java.multiline guava-31.0.1/android/guava/src/com/google/common/util/concurrent/ListeningExecutorService.java
+--- guava-31.0.1/android/guava/src/com/google/common/util/concurrent/ListeningExecutorService.java.multiline	2021-10-13 20:45:58.340767936 -0600
++++ guava-31.0.1/android/guava/src/com/google/common/util/concurrent/ListeningExecutorService.java	2021-10-13 20:45:58.829772316 -0600
+@@ -33,10 +33,6 @@ import java.util.concurrent.TimeUnit;
+  * @author Chris Povirk
+  * @since 10.0
+  */
+-(
+-    "Use TestingExecutors.sameThreadScheduledExecutor, or wrap a real Executor from "
+-        + "java.util.concurrent.Executors with MoreExecutors.listeningDecorator")
+-
+ @ElementTypesAreNonnullByDefault
+ public interface ListeningExecutorService extends ExecutorService {
+   /**
+diff -up guava-31.0.1/guava/src/com/google/common/base/Strings.java.multiline guava-31.0.1/guava/src/com/google/common/base/Strings.java
+--- guava-31.0.1/guava/src/com/google/common/base/Strings.java.multiline	2021-10-13 20:45:58.793771994 -0600
++++ guava-31.0.1/guava/src/com/google/common/base/Strings.java	2021-10-13 20:45:58.829772316 -0600
+@@ -147,8 +147,6 @@ public final class Strings {
+    *     {@code count} is zero)
+    * @throws IllegalArgumentException if {@code count} is negative
+    */
+-  ")
+-  
+   public static String repeat(String string, int count) {
+     checkNotNull(string); // eager for GWT.
+ 
+diff -up guava-31.0.1/guava/src/com/google/common/collect/CompactHashMap.java.multiline guava-31.0.1/guava/src/com/google/common/collect/CompactHashMap.java
+--- guava-31.0.1/guava/src/com/google/common/collect/CompactHashMap.java.multiline	2021-10-13 20:45:58.776771841 -0600
++++ guava-31.0.1/guava/src/com/google/common/collect/CompactHashMap.java	2021-10-13 20:45:58.829772316 -0600
+@@ -117,8 +117,6 @@ class CompactHashMap<K extends Object, V
+    * Maximum allowed false positive probability of detecting a hash flooding attack given random
+    * input.
+    */
+-  (
+-      )
+   static final double HASH_FLOODING_FPP = 0.001;
+ 
+   /**
+diff -up guava-31.0.1/guava/src/com/google/common/collect/CompactHashSet.java.multiline guava-31.0.1/guava/src/com/google/common/collect/CompactHashSet.java
+--- guava-31.0.1/guava/src/com/google/common/collect/CompactHashSet.java.multiline	2021-10-13 20:45:58.747771582 -0600
++++ guava-31.0.1/guava/src/com/google/common/collect/CompactHashSet.java	2021-10-13 20:45:58.829772316 -0600
+@@ -131,8 +131,6 @@ class CompactHashSet<E extends Object> e
+    * Maximum allowed false positive probability of detecting a hash flooding attack given random
+    * input.
+    */
+-  (
+-      )
+   static final double HASH_FLOODING_FPP = 0.001;
+ 
+   /**
+diff -up guava-31.0.1/guava/src/com/google/common/collect/FluentIterable.java.multiline guava-31.0.1/guava/src/com/google/common/collect/FluentIterable.java
+--- guava-31.0.1/guava/src/com/google/common/collect/FluentIterable.java.multiline	2021-10-13 20:45:58.750771608 -0600
++++ guava-31.0.1/guava/src/com/google/common/collect/FluentIterable.java	2021-10-13 20:47:09.340403972 -0600
+@@ -173,9 +173,6 @@ public abstract class FluentIterable<E e
+    *     FluentIterable}
+    */
+   @Deprecated
+-  (
+-      replacement = "checkNotNull(iterable)",
+-      staticImports = {"com.google.common.base.Preconditions.checkNotNull"})
+   public static <E extends Object> FluentIterable<E> from(FluentIterable<E> iterable) {
+     return checkNotNull(iterable);
+   }
+diff -up guava-31.0.1/guava/src/com/google/common/collect/Streams.java.multiline guava-31.0.1/guava/src/com/google/common/collect/Streams.java
+--- guava-31.0.1/guava/src/com/google/common/collect/Streams.java.multiline	2021-10-13 20:45:58.779771868 -0600
++++ guava-31.0.1/guava/src/com/google/common/collect/Streams.java	2021-10-13 20:45:58.829772316 -0600
+@@ -76,7 +76,6 @@ public final class Streams {
+    */
+   
+   @Deprecated
+-  ")
+   public static <T extends Object> Stream<T> stream(Collection<T> collection) {
+     return collection.stream();
+   }
+@@ -106,8 +105,6 @@ public final class Streams {
+    * <p><b>Java 9 users:</b> use {@code optional.stream()} instead.
+    */
+   
+-  ")
+-  
+   public static <T> Stream<T> stream(java.util.Optional<T> optional) {
+     return optional.isPresent() ? Stream.of(optional.get()) : Stream.empty();
+   }
+@@ -119,8 +116,6 @@ public final class Streams {
+    * <p><b>Java 9 users:</b> use {@code optional.stream()} instead.
+    */
+   
+-  ")
+-  
+   public static IntStream stream(OptionalInt optional) {
+     return optional.isPresent() ? IntStream.of(optional.getAsInt()) : IntStream.empty();
+   }
+@@ -132,8 +127,6 @@ public final class Streams {
+    * <p><b>Java 9 users:</b> use {@code optional.stream()} instead.
+    */
+   
+-  ")
+-  
+   public static LongStream stream(OptionalLong optional) {
+     return optional.isPresent() ? LongStream.of(optional.getAsLong()) : LongStream.empty();
+   }
+@@ -145,8 +138,6 @@ public final class Streams {
+    * <p><b>Java 9 users:</b> use {@code optional.stream()} instead.
+    */
+   
+-  ")
+-  
+   public static DoubleStream stream(OptionalDouble optional) {
+     return optional.isPresent() ? DoubleStream.of(optional.getAsDouble()) : DoubleStream.empty();
+   }
+diff -up guava-31.0.1/guava/src/com/google/common/graph/Traverser.java.multiline guava-31.0.1/guava/src/com/google/common/graph/Traverser.java
+--- guava-31.0.1/guava/src/com/google/common/graph/Traverser.java.multiline	2021-10-13 20:45:58.697771134 -0600
++++ guava-31.0.1/guava/src/com/google/common/graph/Traverser.java	2021-10-13 20:45:58.830772325 -0600
+@@ -61,9 +61,6 @@ import javax.annotation.CheckForNull;
+  * @since 23.1
+  */
+ 
+-(
+-    "Call forGraph or forTree, passing a lambda or a Graph with the desired edges (built with"
+-        + " GraphBuilder)")
+ @ElementTypesAreNonnullByDefault
+ public abstract class Traverser<N> {
+   private final SuccessorsFunction<N> successorFunction;
+diff -up guava-31.0.1/guava/src/com/google/common/primitives/Doubles.java.multiline guava-31.0.1/guava/src/com/google/common/primitives/Doubles.java
+--- guava-31.0.1/guava/src/com/google/common/primitives/Doubles.java.multiline	2021-10-13 20:45:58.704771196 -0600
++++ guava-31.0.1/guava/src/com/google/common/primitives/Doubles.java	2021-10-13 20:45:58.830772325 -0600
+@@ -211,8 +211,6 @@ public final class Doubles extends Doubl
+    *     the array
+    * @throws IllegalArgumentException if {@code array} is empty
+    */
+-  (
+-      "Available in GWT! Annotation is to avoid conflict with GWT specialization of base class.")
+   public static double min(double... array) {
+     checkArgument(array.length > 0);
+     double min = array[0];
+@@ -231,8 +229,6 @@ public final class Doubles extends Doubl
+    *     in the array
+    * @throws IllegalArgumentException if {@code array} is empty
+    */
+-  (
+-      "Available in GWT! Annotation is to avoid conflict with GWT specialization of base class.")
+   public static double max(double... array) {
+     checkArgument(array.length > 0);
+     double max = array[0];
+diff -up guava-31.0.1/guava/src/com/google/common/primitives/Floats.java.multiline guava-31.0.1/guava/src/com/google/common/primitives/Floats.java
+--- guava-31.0.1/guava/src/com/google/common/primitives/Floats.java.multiline	2021-10-13 20:45:58.703771187 -0600
++++ guava-31.0.1/guava/src/com/google/common/primitives/Floats.java	2021-10-13 20:45:58.830772325 -0600
+@@ -206,8 +206,6 @@ public final class Floats extends Floats
+    *     the array
+    * @throws IllegalArgumentException if {@code array} is empty
+    */
+-  (
+-      "Available in GWT! Annotation is to avoid conflict with GWT specialization of base class.")
+   public static float min(float... array) {
+     checkArgument(array.length > 0);
+     float min = array[0];
+@@ -226,8 +224,6 @@ public final class Floats extends Floats
+    *     in the array
+    * @throws IllegalArgumentException if {@code array} is empty
+    */
+-  (
+-      "Available in GWT! Annotation is to avoid conflict with GWT specialization of base class.")
+   public static float max(float... array) {
+     checkArgument(array.length > 0);
+     float max = array[0];
+diff -up guava-31.0.1/guava/src/com/google/common/primitives/Ints.java.multiline guava-31.0.1/guava/src/com/google/common/primitives/Ints.java
+--- guava-31.0.1/guava/src/com/google/common/primitives/Ints.java.multiline	2021-10-13 20:45:58.702771178 -0600
++++ guava-31.0.1/guava/src/com/google/common/primitives/Ints.java	2021-10-13 20:45:58.830772325 -0600
+@@ -222,8 +222,6 @@ public final class Ints extends IntsMeth
+    *     the array
+    * @throws IllegalArgumentException if {@code array} is empty
+    */
+-  (
+-      "Available in GWT! Annotation is to avoid conflict with GWT specialization of base class.")
+   public static int min(int... array) {
+     checkArgument(array.length > 0);
+     int min = array[0];
+@@ -243,8 +241,6 @@ public final class Ints extends IntsMeth
+    *     in the array
+    * @throws IllegalArgumentException if {@code array} is empty
+    */
+-  (
+-      "Available in GWT! Annotation is to avoid conflict with GWT specialization of base class.")
+   public static int max(int... array) {
+     checkArgument(array.length > 0);
+     int max = array[0];
+diff -up guava-31.0.1/guava/src/com/google/common/primitives/Shorts.java.multiline guava-31.0.1/guava/src/com/google/common/primitives/Shorts.java
+--- guava-31.0.1/guava/src/com/google/common/primitives/Shorts.java.multiline	2021-10-13 20:45:58.700771161 -0600
++++ guava-31.0.1/guava/src/com/google/common/primitives/Shorts.java	2021-10-13 20:45:58.830772325 -0600
+@@ -219,8 +219,6 @@ public final class Shorts extends Shorts
+    *     the array
+    * @throws IllegalArgumentException if {@code array} is empty
+    */
+-  (
+-      "Available in GWT! Annotation is to avoid conflict with GWT specialization of base class.")
+   public static short min(short... array) {
+     checkArgument(array.length > 0);
+     short min = array[0];
+@@ -240,8 +238,6 @@ public final class Shorts extends Shorts
+    *     in the array
+    * @throws IllegalArgumentException if {@code array} is empty
+    */
+-  (
+-      "Available in GWT! Annotation is to avoid conflict with GWT specialization of base class.")
+   public static short max(short... array) {
+     checkArgument(array.length > 0);
+     short max = array[0];
+diff -up guava-31.0.1/guava/src/com/google/common/util/concurrent/ClosingFuture.java.multiline guava-31.0.1/guava/src/com/google/common/util/concurrent/ClosingFuture.java
+--- guava-31.0.1/guava/src/com/google/common/util/concurrent/ClosingFuture.java.multiline	2021-10-13 20:45:58.686771035 -0600
++++ guava-31.0.1/guava/src/com/google/common/util/concurrent/ClosingFuture.java	2021-10-13 20:45:58.831772334 -0600
+@@ -1229,9 +1229,6 @@ public final class ClosingFuture<V exten
+    *           .closing(executor);
+    * }</pre>
+    */
+-  // TODO(cpovirk): Use simple name instead of fully qualified after we stop building with JDK 8.
+-  @com.google.errorprone.annotations.DoNotMock(
+-      "Use ClosingFuture.whenAllSucceed() or .whenAllComplete() instead.")
+   public static class Combiner {
+ 
+     private final CloseableList closeables = new CloseableList();
+diff -up guava-31.0.1/guava/src/com/google/common/util/concurrent/ListeningExecutorService.java.multiline guava-31.0.1/guava/src/com/google/common/util/concurrent/ListeningExecutorService.java
+--- guava-31.0.1/guava/src/com/google/common/util/concurrent/ListeningExecutorService.java.multiline	2021-10-13 20:45:58.673770919 -0600
++++ guava-31.0.1/guava/src/com/google/common/util/concurrent/ListeningExecutorService.java	2021-10-13 20:45:58.831772334 -0600
+@@ -33,10 +33,6 @@ import java.util.concurrent.TimeUnit;
+  * @author Chris Povirk
+  * @since 10.0
+  */
+-(
+-    "Use TestingExecutors.sameThreadScheduledExecutor, or wrap a real Executor from "
+-        + "java.util.concurrent.Executors with MoreExecutors.listeningDecorator")
+-
+ @ElementTypesAreNonnullByDefault
+ public interface ListeningExecutorService extends ExecutorService {
+   /**
+diff -up guava-31.0.1/guava/target/classes/com/google/common/base/Strings.java.multiline guava-31.0.1/guava/target/classes/com/google/common/base/Strings.java
+diff -up guava-31.0.1/guava/target/classes/com/google/common/collect/CompactHashMap.java.multiline guava-31.0.1/guava/target/classes/com/google/common/collect/CompactHashMap.java
+diff -up guava-31.0.1/guava/target/classes/com/google/common/collect/CompactHashSet.java.multiline guava-31.0.1/guava/target/classes/com/google/common/collect/CompactHashSet.java
+diff -up guava-31.0.1/guava/target/classes/com/google/common/collect/Streams.java.multiline guava-31.0.1/guava/target/classes/com/google/common/collect/Streams.java
+diff -up guava-31.0.1/guava/target/classes/com/google/common/graph/Traverser.java.multiline guava-31.0.1/guava/target/classes/com/google/common/graph/Traverser.java
+diff -up guava-31.0.1/guava/target/classes/com/google/common/primitives/Doubles.java.multiline guava-31.0.1/guava/target/classes/com/google/common/primitives/Doubles.java
+diff -up guava-31.0.1/guava/target/classes/com/google/common/primitives/Floats.java.multiline guava-31.0.1/guava/target/classes/com/google/common/primitives/Floats.java
+diff -up guava-31.0.1/guava/target/classes/com/google/common/primitives/Ints.java.multiline guava-31.0.1/guava/target/classes/com/google/common/primitives/Ints.java
+diff -up guava-31.0.1/guava/target/classes/com/google/common/primitives/Shorts.java.multiline guava-31.0.1/guava/target/classes/com/google/common/primitives/Shorts.java
+diff -up guava-31.0.1/guava/target/classes/com/google/common/util/concurrent/ClosingFuture.java.multiline guava-31.0.1/guava/target/classes/com/google/common/util/concurrent/ClosingFuture.java
+diff -up guava-31.0.1/guava/target/classes/com/google/common/util/concurrent/ListeningExecutorService.java.multiline guava-31.0.1/guava/target/classes/com/google/common/util/concurrent/ListeningExecutorService.java
